@@ -22,3 +22,15 @@
 ._h1.data-v-5eca2e54 {
   font-size: 50rpx;
 }
+.button.data-v-5eca2e54 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 30rpx 64rpx;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32rpx;
+  margin: 0 20rpx 10rpx 5rpx;
+  border-radius: 20rpx;
+}

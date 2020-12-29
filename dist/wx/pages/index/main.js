@@ -109,25 +109,75 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      title: ''
+      title: '',
+      color: '',
+      buttonList: [{
+        background: '#DC143C',
+        color: '',
+        name: '动画',
+        value: 'a'
+      }, {
+        background: '#FF1493',
+        color: '',
+        name: '漫画',
+        value: 'b'
+      }, {
+        background: '#FFB6C1',
+        color: '',
+        name: '游戏',
+        value: 'c'
+      }, {
+        background: '#EE82EE',
+        color: '',
+        name: '原创',
+        value: 'e'
+      }, {
+        background: '#D2691E',
+        color: '',
+        name: '来自网络',
+        value: 'f'
+      }, {
+        background: '#FA8072',
+        color: '',
+        name: '其他',
+        value: 'g'
+      }, {
+        background: '#D2B48C',
+        color: '',
+        name: '影视',
+        value: 'h'
+      }, {
+        background: '#FFFACD',
+        color: '',
+        name: '诗词',
+        value: 'i'
+      }, {
+        background: '#7FFFD4',
+        color: '',
+        name: '网易云',
+        value: 'g'
+      }, {
+        background: '#00BFFF',
+        color: '',
+        name: '哲学',
+        value: 'k'
+      }, {
+        background: '#DCDCDC',
+        color: '',
+        name: '抖机灵',
+        value: 'i'
+      }]
     };
   },
 
   components: {},
   methods: {
-    buttonClick: function buttonClick(value) {
+    buttonClick: function buttonClick(value, color) {
+      this.color = color;
       var that = this;
       wx.request({
         url: 'https://v1.hitokoto.cn?c=' + value, //仅为示例，并非真实的接口地址
@@ -155,191 +205,29 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "box"
   }, [_c('header', {
     staticClass: "header"
-  }, [_c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '0'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('a')
+  }, _vm._l((_vm.buttonList), function(item, index) {
+    return _c('div', {
+      key: index,
+      staticClass: "button",
+      style: ({
+        background: item.background
+      }),
+      attrs: {
+        "eventid": '0_' + index
+      },
+      on: {
+        "click": function($event) {
+          _vm.buttonClick(item.value, item.background)
+        }
       }
-    }
-  }, [_vm._v("动画")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '1'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('b')
-      }
-    }
-  }, [_vm._v("漫画")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '2'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('c')
-      }
-    }
-  }, [_vm._v("游戏")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '3'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('d')
-      }
-    }
-  }, [_vm._v("文学")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '4'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('e')
-      }
-    }
-  }, [_vm._v("原创")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '5'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('f')
-      }
-    }
-  }, [_vm._v("来自网络")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '6'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('g')
-      }
-    }
-  }, [_vm._v("其他")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '7'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('h')
-      }
-    }
-  }, [_vm._v("影视")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '8'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('i')
-      }
-    }
-  }, [_vm._v("诗词")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '9'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('g')
-      }
-    }
-  }, [_vm._v("网易云")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '10'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('k')
-      }
-    }
-  }, [_vm._v("哲学")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '11'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('i')
-      }
-    }
-  }, [_vm._v("抖机灵")]), _vm._v(" "), _c('button', {
-    staticStyle: {
-      "margin": "0 20rpx 10rpx 5rpx"
-    },
-    attrs: {
-      "type": "primary",
-      "size": "small",
-      "eventid": '12'
-    },
-    on: {
-      "click": function($event) {
-        _vm.buttonClick('a')
-      }
-    }
-  }, [_vm._v("其他")])], 1), _vm._v(" "), _c('section', {
+    }, [_vm._v("\n      " + _vm._s(item.name) + "\n    ")])
+  })), _vm._v(" "), _c('section', {
     staticClass: "section"
-  }, [_c('h1', [_vm._v(_vm._s(_vm.title))])], 1)], 1)
+  }, [_c('h1', {
+    style: ({
+      color: _vm.color
+    })
+  }, [_vm._v(_vm._s(_vm.title))])], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

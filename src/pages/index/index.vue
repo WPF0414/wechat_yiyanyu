@@ -1,36 +1,98 @@
 <template>
   <div class="box">
     <header class="header">
-      <button type="primary" @click="buttonClick('a')" style="margin:0 20rpx 10rpx 5rpx" size="small">动画</button>
-      <button type="primary" @click="buttonClick('b')" style="margin:0 20rpx 10rpx 5rpx" size="small">漫画</button>
-      <button type="primary" @click="buttonClick('c')" style="margin:0 20rpx 10rpx 5rpx" size="small">游戏</button>
-      <button type="primary" @click="buttonClick('d')" style="margin:0 20rpx 10rpx 5rpx" size="small">文学</button>
-      <button type="primary" @click="buttonClick('e')" style="margin:0 20rpx 10rpx 5rpx" size="small">原创</button>
-      <button type="primary" @click="buttonClick('f')" style="margin:0 20rpx 10rpx 5rpx" size="small">来自网络</button>
-      <button type="primary" @click="buttonClick('g')" style="margin:0 20rpx 10rpx 5rpx" size="small">其他</button>
-      <button type="primary" @click="buttonClick('h')" style="margin:0 20rpx 10rpx 5rpx" size="small">影视</button>
-      <button type="primary" @click="buttonClick('i')" style="margin:0 20rpx 10rpx 5rpx" size="small">诗词</button>
-      <button type="primary" @click="buttonClick('g')" style="margin:0 20rpx 10rpx 5rpx" size="small">网易云</button>
-      <button type="primary" @click="buttonClick('k')" style="margin:0 20rpx 10rpx 5rpx" size="small">哲学</button>
-      <button type="primary" @click="buttonClick('i')" style="margin:0 20rpx 10rpx 5rpx" size="small">抖机灵</button>
-      <button type="primary" @click="buttonClick('a')" style="margin:0 20rpx 10rpx 5rpx" size="small">其他</button>
+      <div v-for="(item,index) in buttonList" :key="index" class="button" @click="buttonClick(item.value,item.background)" :style="{background:item.background}">
+        {{item.name}}
+      </div>
     </header>
     <section class="section">
-      <h1>{{title}}</h1>
+      <h1 :style="{color:color}">{{title}}</h1>
     </section>
   </div>
 </template>
 
+<script src="js/vertex.js"></script>
+<script src="js/index.js"></script>
 <script>
 export default {
   data() {
     return {
-      title: ''
+      title: '',
+      color: '',
+      buttonList: [
+        {
+          background: '#DC143C',
+          color: '',
+          name: '动画',
+          value: 'a'
+        },
+        {
+          background: '#FF1493',
+          color: '',
+          name: '漫画',
+          value: 'b'
+        },
+        {
+          background: '#FFB6C1',
+          color: '',
+          name: '游戏',
+          value: 'c'
+        },
+        {
+          background: '#EE82EE',
+          color: '',
+          name: '原创',
+          value: 'e'
+        },
+        {
+          background: '#D2691E',
+          color: '',
+          name: '来自网络',
+          value: 'f'
+        },
+        {
+          background: '#FA8072',
+          color: '',
+          name: '其他',
+          value: 'g'
+        },
+        {
+          background: '#D2B48C',
+          color: '',
+          name: '影视',
+          value: 'h'
+        },
+        {
+          background: '#FFFACD',
+          color: '',
+          name: '诗词',
+          value: 'i'
+        },
+        {
+          background: '#7FFFD4',
+          color: '',
+          name: '网易云',
+          value: 'g'
+        },
+        {
+          background: '#00BFFF',
+          color: '',
+          name: '哲学',
+          value: 'k'
+        },
+        {
+          background: '#DCDCDC',
+          color: '',
+          name: '抖机灵',
+          value: 'i'
+        }
+      ]
     }
   },
   components: {},
   methods: {
-    buttonClick(value) {
+    buttonClick(value,color) {
+      this.color = color;
       let that = this;
       wx.request({
         url: `https://v1.hitokoto.cn?c=${value}`, //仅为示例，并非真实的接口地址
@@ -72,5 +134,17 @@ export default {
 }
 h1{
   font-size: 50rpx;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin:0 20rpx 10rpx 5rpx;
+    border-radius: 10px;
 }
 </style>
