@@ -6,7 +6,7 @@
       </div>
     </header>
     <section class="section">
-      <h2 :style="{color:color}">{{title}}</h1>
+      <h2 :style="{color:color}">{{title}}</h2>
     </section>
   </div>
 </template>
