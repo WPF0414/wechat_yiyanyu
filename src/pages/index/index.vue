@@ -19,62 +19,52 @@ export default {
     return {
       title: '',
       color: '',
-      buttonList: [
-        {
-          background: '#DC143C',
-          color: '',
-          name: '动画',
-          value: 'a'
-        },
-        {
-          background: '#FF1493',
-          color: '',
-          name: '漫画',
-          value: 'b'
-        },
-        {
-          background: '#FFB6C1',
-          color: '',
-          name: '游戏',
-          value: 'c'
-        },
-        {
-          background: '#EE82EE',
-          color: '',
-          name: '原创',
-          value: 'e'
-        },
-        {
-          background: '#D2691E',
-          color: '',
-          name: '网络',
-          value: 'f'
-        },
-        {
-          background: '#FA8072',
-          color: '',
-          name: '其他',
-          value: 'g'
-        },
-        {
-          background: '#D2B48C',
-          color: '',
-          name: '影视',
-          value: 'h'
-        },
-        {
-          background: '#FFFACD',
-          color: '',
-          name: '诗词',
-          value: 'i'
-        },
-        {
-          background: '#00BFFF',
-          color: '',
-          name: '哲学',
-          value: 'k'
-        },
-      ]
+      buttonList: [{
+        background: '#DC143C',
+        color: '',
+        name: '动画',
+        value: 'a'
+      }, {
+        background: '#FF1493',
+        color: '',
+        name: '漫画',
+        value: 'b'
+      }, {
+        background: '#2E8B57',
+        color: '',
+        name: '游戏',
+        value: 'c'
+      }, {
+        background: '#EE82E9',
+        color: '',
+        name: '原创',
+        value: 'e'
+      }, {
+        background: '#D2691E',
+        color: '',
+        name: '网络',
+        value: 'f'
+      }, {
+        background: '#008B8B',
+        color: '',
+        name: '其他',
+        value: 'g'
+      }, {
+        background: '#FFA500',
+        color: '',
+        name: '影视',
+        value: 'h'
+      }, {
+        background: '#FA8072',
+        color: '',
+        name: '诗词',
+        value: 'i'
+      }, {
+        background: '#00BFFF',
+        color: '',
+        name: '哲学',
+        value: 'k'
+      }]
     }
   },
   components: {},
