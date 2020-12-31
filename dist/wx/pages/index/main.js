@@ -138,7 +138,7 @@ if (false) {(function () {
       }, {
         background: '#D2691E',
         color: '',
-        name: '来自网络',
+        name: '网络',
         value: 'f'
       }, {
         background: '#FA8072',
@@ -156,20 +156,10 @@ if (false) {(function () {
         name: '诗词',
         value: 'i'
       }, {
-        background: '#7FFFD4',
-        color: '',
-        name: '网易云',
-        value: 'g'
-      }, {
         background: '#00BFFF',
         color: '',
         name: '哲学',
         value: 'k'
-      }, {
-        background: '#DCDCDC',
-        color: '',
-        name: '抖机灵',
-        value: 'i'
       }]
     };
   },
@@ -224,6 +214,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   })), _vm._v(" "), _c('section', {
     staticClass: "section"
   }, [_c('h1', {
+    staticClass: "section_title",
     style: ({
       color: _vm.color
     })

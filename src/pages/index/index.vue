@@ -6,7 +6,7 @@
       </div>
     </header>
     <section class="section">
-      <h1 :style="{color:color}">{{title}}</h1>
+      <h1 class="section_title" :style="{color:color}">{{title}}</h1>
     </section>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
         {
           background: '#D2691E',
           color: '',
-          name: '来自网络',
+          name: '网络',
           value: 'f'
         },
         {
@@ -69,23 +69,11 @@ export default {
           value: 'i'
         },
         {
-          background: '#7FFFD4',
-          color: '',
-          name: '网易云',
-          value: 'g'
-        },
-        {
           background: '#00BFFF',
           color: '',
           name: '哲学',
           value: 'k'
         },
-        {
-          background: '#DCDCDC',
-          color: '',
-          name: '抖机灵',
-          value: 'i'
-        }
       ]
     }
   },
@@ -122,14 +110,14 @@ export default {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 25rpx;
-  margin-left: 20rpx;
+  margin-top: 80rpx;
+  justify-content:space-around;
 }
 .section{
   width: 100%;
   box-sizing: border-box;
   padding-left: 20rpx;
-  padding-right: 20px;
+  padding-right: 20rpx;
   margin-top: 50rpx;
 }
 h1{
@@ -146,5 +134,9 @@ h1{
     font-size: 16px;
     margin:0 20rpx 10rpx 5rpx;
     border-radius: 10px;
+}
+.section_title{
+  margin-top:100rpx;
+  display: inline-block;
 }
 </style>
