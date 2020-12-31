@@ -6,7 +6,7 @@
       </view>
     </view>
     <view class="_section data-v-5eca2e54 section">
-      <view class="_h1 data-v-5eca2e54" style=" {{('color:' + color + ';')}}">{{title}}</view>
+      <view class="_h2 data-v-5eca2e54" style="{{('color:' + color + ';')}}">{{title}}</view>
     </view>
   </view>
 </template>

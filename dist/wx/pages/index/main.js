@@ -126,47 +126,47 @@ if (false) {(function () {
         name: '漫画',
         value: 'b'
       }, {
-        background: '#FFB6C1',
+        background: '#2E8B57',
         color: '',
         name: '游戏',
         value: 'c'
       }, {
-        background: '#EE82EE',
+        background: '#EE82E9',
         color: '',
         name: '原创',
         value: 'e'
       }, {
         background: '#D2691E',
         color: '',
-        name: '来自网络',
+        name: '网络',
         value: 'f'
       }, {
-        background: '#FA8072',
+        background: '#008B8B',
         color: '',
         name: '其他',
         value: 'g'
       }, {
-        background: '#D2B48C',
+        background: '#FFA500',
         color: '',
         name: '影视',
         value: 'h'
       }, {
-        background: '#FFFACD',
+        background: '#FA8072',
         color: '',
         name: '诗词',
         value: 'i'
-      }, {
-        background: '#7FFFD4',
-        color: '',
-        name: '网易云',
-        value: 'g'
       }, {
         background: '#00BFFF',
         color: '',
         name: '哲学',
         value: 'k'
       }, {
-        background: '#DCDCDC',
+        background: '#48D1CC',
+        color: '',
+        name: '网易云',
+        value: 'g'
+      }, {
+        background: '#800000',
         color: '',
         name: '抖机灵',
         value: 'i'
